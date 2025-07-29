@@ -1,14 +1,52 @@
-/* Updated Profile Pic Styles */
-.profile-pic.square {
-  width: 140px;
-  height: 140px;
-  border-radius: 0;
-  object-fit: cover;
-  border: 4px solid #fff;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+/* ==========================
+   Sumonto Biswas - Style.css
+   ========================== */
+
+:root {
+  --primary-bg: #e0f7fa;
+  --primary-text: #333;
+  --header-bg: #004d40;
+  --accent-color: #00796b;
+  --highlight: #ffd600;
+  --section-border: #00695c;
+
+  --dark-bg: #121212;
+  --dark-text: #eeeeee;
+  --dark-header: #1f1f1f;
+  --dark-accent: #00bfa5;
+  --dark-highlight: #ffea00;
+  --dark-border: #00e5ff;
 }
 
-/* Header layout adjustments */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--primary-bg);
+  color: var(--primary-text);
+  scroll-behavior: smooth;
+  transition: all 0.3s ease;
+  overflow-x: hidden;
+}
+
+body.dark-theme {
+  --primary-bg: var(--dark-bg);
+  --primary-text: var(--dark-text);
+  --header-bg: var(--dark-header);
+  --accent-color: var(--dark-accent);
+  --highlight: var(--dark-highlight);
+  --section-border: var(--dark-border);
+}
+
+header {
+  background-color: var(--header-bg);
+  color: white;
+  padding: 16px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
 .intro-header {
   display: flex;
   justify-content: space-between;
@@ -18,30 +56,172 @@
 
 .intro-text {
   max-width: 70%;
-  text-align: left;
-  color: white;
 }
 
 .intro-text h1 {
   margin: 0;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 
 .intro-text p {
+  margin-top: 6px;
   font-size: 1rem;
-  margin-top: 5px;
 }
 
-/* Prevent overlapping sections */
+.profile-pic.square {
+  width: 140px;
+  height: 140px;
+  border-radius: 0;
+  object-fit: cover;
+  border: 4px solid #fff;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: var(--highlight);
+  color: black;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 1100;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+nav li {
+  margin: 8px 12px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--highlight);
+}
+
 section {
   display: none;
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  padding: 30px 20px;
+  max-width: 1000px;
+  margin: auto;
+  animation: fadeInUp 0.8s ease-out forwards;
 }
 
 section.active {
   display: block;
   opacity: 1;
-  transform: translateY(0);
 }
+
+h2 {
+  color: var(--section-border);
+  border-bottom: 2px solid var(--header-bg);
+  padding-bottom: 5px;
+  font-size: 1.8rem;
+}
+
+ul li {
+  margin: 5px 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+footer {
+  text-align: center;
+  padding: 16px;
+  background: var(--header-bg);
+  color: white;
+  font-size: 0.9rem;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: var(--header-bg);
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Element animation - bouncing metal atoms */
+@keyframes floatAtom {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.atom-icon {
+  width: 50px;
+  height: 50px;
+  background: radial-gradient(circle at center, #90caf9, #1976d2);
+  border-radius: 50%;
+  margin: 10px;
+  display: inline-block;
+  animation: floatAtom 2.5s infinite ease-in-out;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .intro-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .intro-text {
+    max-width: 100%;
+  }
+
+  .profile-pic.square {
+    align-self: flex-end;
+  }
+}
+
