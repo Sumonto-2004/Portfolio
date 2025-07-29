@@ -1,26 +1,27 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const sections = document.querySelectorAll("section");
-  const options = { threshold: 0.1 };
+const navLinks = document.querySelectorAll("nav a");
+const allSections = document.querySelectorAll("section");
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("fade-in");
-      }
-    });
-  }, options);
-
-  sections.forEach(section => observer.observe(section));
-
-  document.getElementById("contact-form").addEventListener("submit", function(e) {
+navLinks.forEach(link => {
+  link.addEventListener("click", function (e) {
     e.preventDefault();
-    alert("Thank you for reaching out. I'll get back to you soon.");
-    this.reset();
-  });
+    const targetId = this.getAttribute("href").substring(1);
+    
+    allSections.forEach(section => {
+      section.classList.remove("active");
+    });
 
-  const toggleBtn = document.getElementById("theme-toggle");
-  toggleBtn.addEventListener("click", function () {
-    document.body.classList.toggle("dark-theme");
-    toggleBtn.innerText = document.body.classList.contains("dark-theme") ? "Light Mode" : "Dark Mode";
+    document.getElementById(targetId).classList.add("active");
+
+    // Smooth scroll
+    document.getElementById(targetId).scrollIntoView({ behavior: "smooth" });
   });
 });
+
+// Set first section active by default
+document.addEventListener("DOMContentLoaded", function () {
+  const firstSection = document.querySelector("section");
+  if (firstSection) {
+    firstSection.classList.add("active");
+  }
+});
+
