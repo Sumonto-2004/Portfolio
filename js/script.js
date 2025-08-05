@@ -1,11 +1,11 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const sections = document.querySelectorAll(".section");
-  const options = { threshold: 0.25 };
+document.addEventListener("DOMContentLoaded", function () {
+  const sections = document.querySelectorAll(".scroll-section");
+  const options = { threshold: 0.1 };
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
+        entry.target.classList.add("fade-in");
       }
     });
   }, options);
