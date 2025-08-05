@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const sections = document.querySelectorAll("section");
 
-  const options = {
+  const observerOptions = {
     threshold: 0.2
   };
 
@@ -11,19 +11,18 @@ document.addEventListener("DOMContentLoaded", function () {
         entry.target.classList.add("visible");
       }
     });
-  }, options);
+  }, observerOptions);
 
   sections.forEach(section => {
-    section.classList.add("fade-in");
     observer.observe(section);
   });
 
-  // Resume alert (optional)
+  // Contact form submission
   const contactForm = document.getElementById("contact-form");
   if (contactForm) {
     contactForm.addEventListener("submit", function (e) {
       e.preventDefault();
-      alert("Thank you for reaching out! I’ll get back to you soon.");
+      alert("Thank you for reaching out! I will get back to you soon.");
       this.reset();
     });
   }
