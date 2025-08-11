@@ -146,6 +146,19 @@ section p, section ul {
   box-shadow: 0 6px 14px rgb(0 0 0 / 0.2);
 }
 
+.item-title {
+    font-size: 1.3rem; /* Bigger heading */
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--text-color); /* Uses your theme color */
+}
+
+.item-desc {
+    font-size: 0.95rem; /* Smaller text */
+    line-height: 1.4;
+    color: var(--secondary-text-color); /* Slightly lighter text */
+}
+
 /* Achievements Section */
 .achievement-list {
   display: flex;
