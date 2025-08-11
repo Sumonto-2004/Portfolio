@@ -173,7 +173,7 @@ section p, section ul {
 }
 
 /* Mobile view adjustments */
-@media (max-width: 768px) {
+@media (max-width: 1081px) {
   .project-item {
     flex-direction: column;
     align-items: center;
