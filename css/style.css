@@ -110,40 +110,68 @@ section p, section ul {
 }
 
 /* Projects Section */
-.item {
-  display: flex;
-  align-items: center;
+#projects {
+  padding: 20px;
+}
+
+#projects h2 {
+  font-size: 2rem;
   margin-bottom: 20px;
 }
 
-.item-image {
-  flex: 1; /* 1 part out of 4 */
-  max-width: 25%; /* 1/4 width */
+/* Each project block */
+.project-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 30px;
 }
 
-.item-image img {
+/* Image takes 1/4 width */
+.project-image {
+  flex: 1;
+}
+
+.project-image img {
   width: 100%;
   height: auto;
-  border-radius: 10px; /* Can make circular if needed */
+  border-radius: 8px;
 }
 
-.item-content {
-  flex: 3; /* 3 parts out of 4 */
-  padding-left: 20px;
+/* Text takes the rest of the space */
+.project-content {
+  flex: 3;
 }
 
-.item-content h3 {
-  margin: 0 0 8px;
-  font-size: 1.4rem; /* bigger heading */
+.project-content h3 {
+  margin: 0 0 10px;
 }
 
-.item-content p {
-  margin: 0;
-  font-size: 0.95rem;
-  line-height: 1.4;
-  color: #555;
+.project-content p {
+  margin-bottom: 10px;
 }
 
+/* Link styling */
+.project-content a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.project-content a:hover {
+  background: #f5f5f5;
+}
+
+.project-content a img {
+  max-width: 200px;
+  height: auto;
+  display: block;
+  margin-bottom: 8px;
+}
 /* Achievements Section */
 .achievement-list {
   display: flex;
