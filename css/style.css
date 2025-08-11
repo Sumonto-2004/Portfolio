@@ -172,6 +172,24 @@ section p, section ul {
   background-color: #0056b3;
 }
 
+/* Mobile Layout: Image on top, text below */
+@media (max-width: 768px) {
+  .project {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .project img {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .project-text {
+    width: 100%;
+  }
+}
+
 /* Achievements Section */
 .achievement-list {
   display: flex;
