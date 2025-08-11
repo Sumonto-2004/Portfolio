@@ -172,21 +172,32 @@ section p, section ul {
   background-color: #0056b3;
 }
 
-/* Mobile Layout: Image on top, text below */
+/* Mobile view adjustments */
 @media (max-width: 768px) {
-  .project {
+  .project-item {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
   }
 
-  .project img {
+  .project-image img {
     width: 100%;
+    height: auto;
     margin-right: 0;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
 
-  .project-text {
-    width: 100%;
+  .project-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .project-content h4 {
+    font-size: 1rem;
+  }
+
+  .project-link {
+    padding: 10px 20px;
+    font-size: 1rem;
   }
 }
 
