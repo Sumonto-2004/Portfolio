@@ -109,6 +109,12 @@ section p, section ul {
   line-height: 1.7;
 }
 
+.paragraph {
+  margin-bottom: 10px;
+  line-height: 1.4;
+  font-size: 0.75rem;
+}
+
 /* Projects Section */
 #projects {
   padding: 40px;
