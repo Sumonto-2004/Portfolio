@@ -302,8 +302,11 @@ section p, section ul {
 
 /* Publications */
 .research-section {
-  margin: 40px 0;
-  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers everything horizontally */
+  text-align: center; /* Centers text */
+  margin: 20px auto; /* Adds space around section */
 }
 
 .research-section h2 {
@@ -314,7 +317,8 @@ section p, section ul {
 .research-item {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  gap: 15px; /* Space between image/logo and text */
+  margin-bottom: 20px; /* Space between multiple publications */
 }
 
 .research-item a {
