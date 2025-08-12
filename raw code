@@ -310,53 +310,95 @@ section p, section ul {
 }
 
 /* Projects Section */
-.project-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 24px;
+#projects {
+  padding: 40px;
+  background-color: #f9f9f9;
+}
+
+#projects h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
 }
 
 .project-item {
-  display: block;
-  width: 280px;
-  text-align: center;
-  color: var(--primary-text);
-  text-decoration: none;
-  border-radius: 8px;
-  box-shadow: 0 3px 8px rgb(0 0 0 / 0.1);
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
   background: white;
-  transition: box-shadow 0.3s ease;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-.project-item img {
-  width: 100%;
-  height: 180px;
+.project-image img {
+  width: 150px;
+  height: 150px;
   object-fit: cover;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  border-radius: 8px;
+  margin-right: 20px;
 }
 
-.project-item p {
-  padding: 10px 15px 15px;
-  font-weight: 600;
+.project-content {
+  flex: 1;
 }
 
-.project-item:hover {
-  box-shadow: 0 6px 14px rgb(0 0 0 / 0.2);
+.project-content h3 {
+  margin: 0;
+  font-size: 1.5rem;
 }
 
-.item-title {
-    font-size: 1.3rem; /* Bigger heading */
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: var(--text-color); /* Uses your theme color */
+.project-content h4 {
+  margin: 5px 0 10px;
+  font-size: 1.1rem;
+  color: #555;
 }
 
-.item-desc {
-    font-size: 0.95rem; /* Smaller text */
-    line-height: 1.4;
-    color: var(--secondary-text-color); /* Slightly lighter text */
+.project-content p {
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.project-link {
+  display: inline-block;
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.project-link:hover {
+  background-color: #0056b3;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 1081px) {
+  .project-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .project-image img {
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .project-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .project-content h4 {
+    font-size: 1rem;
+  }
+
+  .project-link {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
 }
 
 /* Achievements Section */
@@ -549,7 +591,6 @@ button:hover {
     max-width: 280px;
   }
 }
-
 
 
 >>>>>>
