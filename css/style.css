@@ -116,7 +116,7 @@ section p, section ul {
 }
 
 #projects h2 {
-  text-align: center;
+  text-align: left;
   margin-bottom: 30px;
   font-size: 2rem;
 }
@@ -297,6 +297,7 @@ section p, section ul {
 /* Publications */
 .research-section {
   margin: 40px 0;
+  padding: 60px;
 }
 
 .research-section h2 {
@@ -342,7 +343,7 @@ section p, section ul {
   margin: 5px 0 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1081px) {
   .research-item {
     flex-direction: column;
     align-items: flex-start;
