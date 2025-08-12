@@ -157,6 +157,7 @@ section p, section ul {
 .project-content p {
   margin-bottom: 10px;
   line-height: 1.4;
+  font-size: 0.5rem;
 }
 
 .project-link {
@@ -166,19 +167,6 @@ section p, section ul {
   color: white;
   text-decoration: none;
   border-radius: 5px;
-}
-
-.project-body {
-  font-size: 0.95rem; /* smaller than default */
-  line-height: 1.5;   /* good readability */
-  color: #333;        /* softer black for eyes */
-}
-
-@media (max-width: 768px) {
-  .project-body {
-    font-size: 0.9rem; /* slightly smaller on mobile */
-    line-height: 1.4;
-  }
 }
 
 .project-link:hover {
@@ -208,6 +196,11 @@ section p, section ul {
     font-size: 1rem;
   }
 
+  .project-body p {
+    font-size: 0.5rem; /* slightly smaller on mobile */
+    line-height: 1.4;
+  }
+  
   .project-link {
     padding: 10px 20px;
     font-size: 1rem;
