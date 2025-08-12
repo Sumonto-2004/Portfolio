@@ -276,6 +276,30 @@ section p, section ul {
   transform: scale(1.05);
 }
 
+.gallery {
+  padding: 2rem;
+  text-align: center;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.gallery-container img {
+  width: 100%;
+  height: 200px; /* Fixed reasonable height */
+  object-fit: cover; /* Crop instead of stretch */
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.gallery-container img:hover {
+  transform: scale(1.05);
+}
+
 /* Contact & Socials */
 .social-links {
   display: flex;
