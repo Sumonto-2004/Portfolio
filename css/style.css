@@ -168,6 +168,19 @@ section p, section ul {
   border-radius: 5px;
 }
 
+.project-body {
+  font-size: 0.95rem; /* smaller than default */
+  line-height: 1.5;   /* good readability */
+  color: #333;        /* softer black for eyes */
+}
+
+@media (max-width: 768px) {
+  .project-body {
+    font-size: 0.9rem; /* slightly smaller on mobile */
+    line-height: 1.4;
+  }
+}
+
 .project-link:hover {
   background-color: #0056b3;
 }
