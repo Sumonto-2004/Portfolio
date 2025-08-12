@@ -157,7 +157,13 @@ section p, section ul {
 .project-content p {
   margin-bottom: 10px;
   line-height: 1.4;
-  font-size: 0.5rem;
+  font-size: 0.75rem;
+}
+
+.project-content ul {
+  margin-bottom: 10px;
+  line-height: 1.4;
+  font-size: 0.75rem;
 }
 
 .project-link {
@@ -197,10 +203,16 @@ section p, section ul {
   }
 
   .project-body p {
-    font-size: 0.5rem; /* slightly smaller on mobile */
+    font-size: 0.75rem; /* slightly smaller on mobile */
     line-height: 1.4;
   }
-  
+
+  .project-content ul {
+  margin-bottom: 10px;
+  line-height: 1.4;
+  font-size: 0.75rem;
+}
+
   .project-link {
     padding: 10px 20px;
     font-size: 1rem;
