@@ -110,9 +110,10 @@ section p, section ul {
 }
 
 #about p {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   line-height: 1.4;
-  color: #003366; /* Dark blue */
+  color: #0b0226; /* Very Dark blue */
+  font-weight: 400;
 }
 
 /*Education*/
